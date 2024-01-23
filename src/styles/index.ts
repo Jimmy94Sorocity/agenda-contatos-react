@@ -6,6 +6,7 @@ const EstiloGlobal = createGlobalStyle`
     padding: 0;
     box-sizing: border-box
     font-family: "Playfair Display", serif;
+    list-style: none;
   }
 `;
 
