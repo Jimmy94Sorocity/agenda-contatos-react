@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import variaveis from "../../styles/variaveis";
 
 export const CardContato = styled.div`
   background-color: #fcfcfc;
@@ -56,4 +57,12 @@ export const Botao = styled.button`
   border-radius: 8px;
   margin-right: 8px;
   right: 0;
+`;
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: ${variaveis.verde};
+`;
+
+export const BotaoCancelarEExcluir = styled(Botao)`
+  background-color: ${variaveis.vermelho};
 `;
