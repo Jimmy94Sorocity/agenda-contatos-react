@@ -1,16 +1,41 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Contato from "../../models/Contato";
 
+type ContatosState = {
+  itens: Contato[];
+};
+
+const initialState: ContatosState = {
+  itens: [
+    {
+      id: 1,
+      nome: "Denise",
+      telefone: 15998547458,
+      email: "teste@teste.com"
+    },
+    {
+      id: 2,
+      nome: "Paulo",
+      telefone: 15999547458,
+      email: "tese@teste.com"
+    },
+    {
+      id: 3,
+      nome: "Ronaldo",
+      telefone: 15998547658,
+      email: "test@teste.com"
+    }
+  ]
+};
+
 const constatosSlice = createSlice({
   name: "contatos",
-  initialState: [
-    new Contato("Denise", 15998547458, "teste@teste.com", 1),
-    new Contato("Paulo", 15999547458, "tese@teste.com", 2),
-    new Contato("Ronaldo", 15998547658, "test@teste.com", 3)
-  ],
+  initialState,
   reducers: {
     excluir: (state, action: PayloadAction<number>) => {
-      state = state.filter((contato) => contato.id !== action.payload);
+      state.itens = state.itens.filter(
+        (contato) => contato.id !== action.payload
+      );
     }
   }
 });

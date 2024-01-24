@@ -5,14 +5,19 @@ import { Container } from "./styles";
 import { RootReducer } from "../../store";
 
 const ListaDeContatos = () => {
-  const { contatos } = useSelector((state: RootReducer) => state);
+  const { itens } = useSelector((state: RootReducer) => state.contatos);
 
   return (
     <Container>
       <ul>
-        {contatos.map((c) => (
+        {itens.map((c) => (
           <li key={c.telefone}>
-            <Contato nome={c.nome} telefone={c.telefone} email={c.email} />
+            <Contato
+              id={c.id}
+              nome={c.nome}
+              telefone={c.telefone}
+              email={c.email}
+            />
           </li>
         ))}
         ;
