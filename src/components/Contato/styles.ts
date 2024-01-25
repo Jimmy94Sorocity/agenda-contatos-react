@@ -10,34 +10,39 @@ export const CardContato = styled.div`
 `;
 
 export const Informacoes = styled.div`
-  align-itens: center;
-  text-align: center;
+  display: grid;
+  justify-content: center;
 `;
 
 export const Avatar = styled.img`
   width: 128px;
   height: 128px;
   border-radius: 50%;
-  background-color: #000;
   margin-bottom: 24px;
 `;
 
-export const Nome = styled.h3`
+export const Nome = styled.input`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  border: none;
+  text-align: center;
 `;
 
-export const Telefone = styled.h3`
+export const Telefone = styled.input`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  border: none;
+  text-align: center;
 `;
 
-export const Email = styled.h3`
+export const Email = styled.input`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 16px;
+  border: none;
+  text-align: center;
 `;
 
 export const BarraAcoes = styled.div`

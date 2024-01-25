@@ -33,13 +33,21 @@ const constatosSlice = createSlice({
   initialState,
   reducers: {
     excluir: (state, action: PayloadAction<number>) => {
-      state.itens = state.itens.filter(
-        (contato) => contato.id !== action.payload
+      state.itens = [
+        ...state.itens.filter((contato) => contato.id !== action.payload)
+      ];
+    },
+    editar: (state, action: PayloadAction<Contato>) => {
+      const indexDoContato = state.itens.findIndex(
+        (c) => c.id === action.payload.id
       );
+      if (indexDoContato >= 0) {
+        state.itens[indexDoContato] = action.payload;
+      }
     }
   }
 });
 
-export const { excluir } = constatosSlice.actions;
+export const { excluir, editar } = constatosSlice.actions;
 
 export default constatosSlice.reducer;
