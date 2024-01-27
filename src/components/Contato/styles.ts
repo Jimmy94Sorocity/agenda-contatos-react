@@ -26,7 +26,6 @@ export const Nome = styled.input`
   font-weight: bold;
   margin-bottom: 8px;
   border: none;
-  text-align: center;
 `;
 
 export const Telefone = styled.input`
@@ -34,7 +33,6 @@ export const Telefone = styled.input`
   font-weight: bold;
   margin-bottom: 8px;
   border: none;
-  text-align: center;
 `;
 
 export const Email = styled.input`
@@ -42,7 +40,6 @@ export const Email = styled.input`
   font-weight: bold;
   margin-bottom: 16px;
   border: none;
-  text-align: center;
 `;
 
 export const BarraAcoes = styled.div`
