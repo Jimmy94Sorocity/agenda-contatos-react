@@ -19,7 +19,7 @@ const ListaDeContatos = () => {
   return (
     <Container>
       <Mensagem>
-        {contatos.length} Contatos encontrados: {input}
+        {contatos.length} Contato(s) encontrado(s): {input}
       </Mensagem>
       <ul>
         {contatos.map((c) => (
