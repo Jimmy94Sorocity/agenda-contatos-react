@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 import Contato from "../../components/Contato";
-import { Container, Mensagem } from "./styles";
+import { MainContainer, Mensagem } from "../../styles/index";
 import { RootReducer } from "../../store";
 
 const ListaDeContatos = () => {
@@ -17,7 +17,7 @@ const ListaDeContatos = () => {
   const contatos = filtraContatos();
 
   return (
-    <Container>
+    <MainContainer>
       <Mensagem>
         {contatos.length} Contato(s) encontrado(s): {input}
       </Mensagem>
@@ -34,7 +34,7 @@ const ListaDeContatos = () => {
         ))}
         ;
       </ul>
-    </Container>
+    </MainContainer>
   );
 };
 

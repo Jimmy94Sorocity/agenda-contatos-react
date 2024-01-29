@@ -4,6 +4,7 @@ import Buttons from "../../components/Buttons";
 import * as S from "./styles";
 import { RootReducer } from "../../store";
 import { alteraInput } from "../../store/reducers/filtro";
+import { Campo } from "../../styles/index";
 
 const ParteLateral = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const ParteLateral = () => {
   return (
     <S.Aside>
       <div>
-        <S.Campo
+        <Campo
           type="text"
           placeholder="Buscar Contato"
           value={input}

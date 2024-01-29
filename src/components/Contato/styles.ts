@@ -61,10 +61,6 @@ export const Botao = styled.button`
   right: 0;
 `;
 
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
-`;
-
 export const BotaoCancelarEExcluir = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `;

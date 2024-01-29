@@ -44,10 +44,21 @@ const constatosSlice = createSlice({
       if (indexDoContato >= 0) {
         state.itens[indexDoContato] = action.payload;
       }
+    },
+    cadastrar: (state, action: PayloadAction<Contato>) => {
+      const contatoJaExiste = state.itens.find(
+        (contato) => contato.telefone === action.payload.telefone
+      );
+
+      if (contatoJaExiste) {
+        alert("Já existe um contato com esse número");
+      } else {
+        state.itens.push(action.payload);
+      }
     }
   }
 });
 
-export const { excluir, editar } = constatosSlice.actions;
+export const { excluir, editar, cadastrar } = constatosSlice.actions;
 
 export default constatosSlice.reducer;
