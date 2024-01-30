@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { BotaoSalvar, MainContainer, Mensagem } from "../../styles/index";
 import { Campo } from "../../styles/index";
 import { Form } from "./styles";
-import Contato from "../../models/Contato";
 import { cadastrar } from "../../store/reducers/contatos";
 
 const Formulario = () => {
@@ -13,14 +12,19 @@ const Formulario = () => {
   const navigate = useNavigate();
 
   const [nome, setNome] = useState("");
-  const [telefone, setTelefone] = useState(0);
+  const [telefone, setTelefone] = useState<number>(0);
   const [email, setEmail] = useState("");
 
   const cadastrarContato = (evento: FormEvent) => {
     evento.preventDefault();
-    const contatoParaAdicionar = new Contato(nome, telefone, email, 9);
 
-    dispatch(cadastrar(contatoParaAdicionar));
+    dispatch(
+      cadastrar({
+        nome,
+        telefone,
+        email
+      })
+    );
     navigate("/");
   };
 
@@ -33,18 +37,21 @@ const Formulario = () => {
           onChange={(evento) => setNome(evento.target.value)}
           type="text"
           placeholder="Nome Completo"
+          required
         />
         <Campo
           value={telefone}
           onChange={(evento) => setTelefone(parseInt(evento.target.value))}
           type="number"
           placeholder="Número do telefone"
+          required
         />
         <Campo
           value={email}
           onChange={(evento) => setEmail(evento.target.value)}
           type="text"
           placeholder="E-mail do contato"
+          required
         />
         <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
       </Form>

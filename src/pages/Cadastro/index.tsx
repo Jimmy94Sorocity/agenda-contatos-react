@@ -3,7 +3,7 @@ import ParteLateral from "../../containers/ParteLateral";
 
 const Cadastro = () => (
   <>
-    <ParteLateral />
+    <ParteLateral botaoInicial={false} />
     <Formulario />
   </>
 );
