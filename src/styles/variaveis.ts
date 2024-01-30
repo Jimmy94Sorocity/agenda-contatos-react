@@ -1,5 +1,5 @@
 export default {
-  vermelho: "#c23616",
-  verde: "#44bd32",
-  azulEscuro: "#2f3640"
+  vermelho: "#ff6348",
+  verde: "#2ed573",
+  azulEscuro: "#2f3542"
 };

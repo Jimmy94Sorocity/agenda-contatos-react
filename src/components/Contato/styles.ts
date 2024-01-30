@@ -19,7 +19,9 @@ export const Avatar = styled.img`
   width: 128px;
   height: 128px;
   border-radius: 50%;
-  margin-bottom: 24px;
+  border: none;
+  margin-bottom: 40px;
+  background-color: #747d8c;
 `;
 
 export const Nome = styled.input`
@@ -27,6 +29,7 @@ export const Nome = styled.input`
   font-weight: bold;
   margin-bottom: 8px;
   border: none;
+  background-color: transparent;
 `;
 
 export const Telefone = styled.input`
@@ -34,6 +37,7 @@ export const Telefone = styled.input`
   font-weight: bold;
   margin-bottom: 8px;
   border: none;
+  background-color: transparent;
 `;
 
 export const Email = styled.input`
@@ -41,6 +45,7 @@ export const Email = styled.input`
   font-weight: bold;
   margin-bottom: 16px;
   border: none;
+  background-color: transparent;
 `;
 
 export const BarraAcoes = styled.div`

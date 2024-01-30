@@ -32,7 +32,6 @@ const ListaDeContatos = () => {
             />
           </li>
         ))}
-        ;
       </ul>
     </MainContainer>
   );
